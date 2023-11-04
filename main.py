@@ -39,7 +39,7 @@ def process_tiredness_scores(result):
 # Add a new function to play alert sound
 def play_alert_sound():
     # Replace with your actual path
-    sound_file = '/Users/tauhid/Driving/DriverAttention.mp3'
+    sound_file = 'DriverAttention.mp3'
     if os.path.exists(sound_file):
         os.system(f'afplay {sound_file}')
     else:
@@ -55,7 +55,7 @@ async def webcam_loop():
 
     while not stop_loop:
         try:
-            client = HumeStreamClient("zlNqvdiibDrb0x9Ex7IN09YG3VSrtpeZRnxRlVrCgnzf0j01")
+            client = HumeStreamClient("API_KEY")
             config = FaceConfig(identify_faces=True)
             async with client.connect([config]) as socket:
                 print("(Connected to Hume API!)")
